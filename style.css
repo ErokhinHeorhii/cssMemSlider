@@ -4,53 +4,71 @@
 }
 
 .body {
-    background: linear-gradient(to bottom right, rgb(71, 157, 161), rgb(61, 102, 162));
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    background: linear-gradient(to bottom right, rgb(179, 221, 223), rgb(61, 102, 162));
     position: relative;
 }
 
 .wrapper-slider {
     display: flex;
     justify-content: center;
-    align-content: center;
     position: relative;
-    width: 100vw;
+    max-width: 90%;
     height: 100vh;
-    max-width: 1280px;
-    margin: 5% auto;
+    margin: 0 auto;
 }
-
 
 .slider {
     position: relative;
     overflow: hidden;
-    width: 75%;
+    max-width: 800px;
     height: auto;
-    margin: 0 auto;
-    align-content: center;
 }
 
 .slides {
     width: 400%;
     height: 100%;
     display: flex;
+    align-items: center;
+    transition: .6s;
 
 }
 
-input[name="r"]{
+input[name="r"] {
     position: absolute;
     visibility: hidden;
 }
 
-.navigation-wrapper{
-    position:absolute;
-   
+.navigation-wrapper {
+    margin-top: 80%;
+    position: absolute;
+    display: flex;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
 }
 
-.label-for-radio{
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
+.label-for-radio {
+    margin-left: 0.5rem;
+    width: 30px;
+    height: 15px;
+    border: 2px solid #ffff;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: .5s;
 }
+
+.label-for-radio:hover {
+    background-color: rgb(11, 111, 233);
+}
+
+.label-for-radio-first {
+    margin-left: 0;
+}
+
+
 
 .slide-items {
     width: 25%;
@@ -58,15 +76,30 @@ input[name="r"]{
 
 .img {
     max-width: 100%;
-    height: auto;
+    /* height: auto; */
     display: block;
     margin: 0 auto;
 }
 
-.text {
+/* .text {
     display: block;
     margin: 0 auto;
     width: 30%;
     text-align: center;
+} */
+
+#r1:checked ~ .s1 {
+    margin-left: 0;
 }
 
+#r2:checked ~ .s1 {
+    margin-left: -25%;
+}
+
+#r3:checked ~ .s1 {
+    margin-left: -50%;
+}
+
+#r4:checked ~ .s1 {
+    margin-left: -75%;
+}
